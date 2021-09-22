@@ -20,7 +20,7 @@ h1{
 	position: relative;
 	top: 100px;
 	left: 100px;
-	 transform: rotatey(35deg);
+	transform: rotatey(35deg);
 	cursor: default;
 	color: #1F6FEB;
 }
@@ -103,31 +103,31 @@ a{
 }
 @keyframes animacaoNome{
 	0%{
-		font-size: 1em;
+		font-size: 16px;
 		left: -500px;
 	}
 	50%{
-		left: 20px;
+		left: 2%;
 	}
 	100%{
-		font-size: 2em;	
-		left: -10px;
+		font-size: 40px;	
+		left: -1%;
 	}
 
 }
 @keyframes animacaoNome1{
 	0%{
 		color: #1F6FEB;
-		font-size: 1em;
+		font-size: 16px;
 		left: -500px;
 	}
 	50%{
-		left: 20px;
+		left: 2%;
 	}
 	100%{
 		color: #fff;
-		font-size: 3em;	
-		left: -10px;
+		font-size: 50px;	
+		left: -1%;
 	}
 }
 #apresentação1{
