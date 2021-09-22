@@ -6,7 +6,7 @@ div{
 	transform-style: preserve-3d;
 }
 header {
-    padding: 40px 100px; 
+    padding: 2em 100px; 
 }
 body{
 	animation: body 2s forwards;
