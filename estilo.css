@@ -18,9 +18,7 @@ body{
 }
 h1{
 	position: relative;
-	top: 3em;
-	left: 100px;
-	transform: rotatey(35deg);
+
 	cursor: default;
 	color: #1F6FEB;
 }
