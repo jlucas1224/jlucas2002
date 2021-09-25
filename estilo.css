@@ -16,9 +16,9 @@ body{
  	perspective: 125vmin;
  	-webkit-filter: drop-shadow(-1vmin 1vmin 1vmin #000);
 }
+span{
+}
 h1{
-	position: relative;
-
 	cursor: default;
 	color: #1F6FEB;
 }
@@ -101,14 +101,14 @@ a{
 }
 @keyframes animacaoNome{
 	0%{
-		font-size: 16px;
+		font-size: 0.5em;
 		left: -500px;
 	}
 	50%{
 		left: 2%;
 	}
 	100%{
-		font-size: 40px;	
+		font-size: 2em;	
 		left: -1%;
 	}
 
@@ -116,7 +116,7 @@ a{
 @keyframes animacaoNome1{
 	0%{
 		color: #1F6FEB;
-		font-size: 16px;
+		font-size: 0.5em;
 		left: -500px;
 	}
 	50%{
@@ -124,7 +124,7 @@ a{
 	}
 	100%{
 		color: #fff;
-		font-size: 50px;	
+		font-size: 3em;	
 		left: -1%;
 	}
 }
