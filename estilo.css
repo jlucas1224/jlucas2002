@@ -1,3 +1,9 @@
+* {
+    
+}
+div{
+	
+}
 header {
     padding: 2em 100px; 
 }
@@ -146,7 +152,7 @@ a{
   	width: 400px;
   	height: 300px;
   	border-radius: 50%;
-  	background-image: url("imagens/linguagensProgramação.png");
+  	background-image: url("imagens/linguagensProgramacao.png");
   	background-size: cover;
   	transition: ease-in-out 0.3s;
   	z-index: 2;
