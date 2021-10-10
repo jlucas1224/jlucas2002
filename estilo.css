@@ -6,6 +6,18 @@ body{
   height: 100vh;
  	filter: drop-shadow(-1vmin 1vmin 1vmin #000);
 }
+#caixa-nome{
+	float: left;
+}
+#sobre-mim{
+	position: relative;
+	margin: 160px 0;
+	font-size: 1em;
+	clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);	
+	width: 400px;
+	float: right;
+	animation: animacaoSobreMim 0.5s 1.7s forwards;
+}
 hr.HrCima{
 	position: relative;
 	left: -100%;
@@ -15,7 +27,7 @@ hr.HrCima{
 	background-color:#0F0F0F;
 	margin-left: auto;
   margin-right: auto;
-  animation: animacaoConteudo 1s 1.7s forwards;
+  animation: animacaoConteudo 1s 2.3s forwards;
 }
 hr{
 	position: relative;
@@ -26,7 +38,7 @@ hr{
 	background-color:#1F6FEB;
 	margin-left: auto;
   margin-right: auto;
-  animation: animacaoConteudo 1s 1.7s forwards;
+  animation: animacaoConteudo 1s 2.3s forwards;
 }
 hr.HrBaixo{
 	position: relative;
@@ -37,7 +49,7 @@ hr.HrBaixo{
 	background-color:#0F0F0F;
 	margin-left: auto;
   margin-right: auto;
-  animation: animacaoConteudo 1s 1.7s forwards;
+  animation: animacaoConteudo 1s 2.3s forwards;
 }
 h1{
 	cursor: default;
@@ -48,27 +60,13 @@ a{
 	text-decoration: none;
 }
 #nome{
-	padding: 2em 100px; 
-}
-#caixa{
-	display: inline-block;
-	margin: 0;
-	position: relative;
-}
-#caixa a{
-	cursor: pointer;
-}
-#caixa a div:hover{
-	color: #fff;
-}
-#caixa h2{
-	margin: 25px 0;
+	padding: 50px 100px; 
 }
 .titulos{
 	font-size: 4em;
 	position: relative;
 	left: -100%;
-	animation: animacaoConteudo 1s 1.7s forwards;
+	animation: animacaoConteudo 1s 2.3s forwards;
 }
 #email{
 	background: url(imagens/iconeEmail.png) no-repeat;
@@ -119,6 +117,15 @@ a{
 		left: -1%;
 	}
 }
+@keyframes animacaoSobreMim{
+	from {
+		clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);	
+	  }
+	  to {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	  }
+
+}
 @keyframes animacaoConteudo{
 	0%{
 		left: -500px;
@@ -146,91 +153,93 @@ a{
 	left: -500px;
 	animation: animacaoNome1 1s 1s forwards;
 }
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 500px;
-  width: 100%;
-  overflow: hidden;
+.image-container {
+	height: 300px;
+	position: relative;
+	left: -100%;
+	animation: animacaoConteudo 1s 2.3s forwards;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	width: 600px;
+	grid-gap: 0.5rem;
 }
-.web, .java, .flutter{
-	 position: relative;
-  left: -100%;
-  animation: animacaoConteudo 1s 1.7s forwards;
+.image-container .imagem {
+	position: relative;
+	padding-bottom: 100%;
 }
-.web .container__image{
- 	display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 400px;
-  height: 300px;
-  border-radius: 50%;
-  background-image: url("imagens/linguagensProgramacao.png");
-  background-size: cover;
-  transition: ease-in-out 0.3s;
-  z-index: 2;
+.image-container .imagem img {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	left: 0;
+	position: absolute;
+	top: 0;
 }
-.java .container__image{
- 	display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 400px;
-  height: 300px;
-  border-radius: 50%;
-  background-image: url("imagens/java.png");
-  background-size: cover;
-  transition: ease-in-out 0.3s;
-  z-index: 2;
+.image-container .imagem img:nth-of-type(1) {
+	filter: grayscale(1) brightness(40%);
 }
-.flutter .container__image{
- 	display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 400px;
-  height: 300px;
-  border-radius: 50%;
-  background-image: url("imagens/flutter.png");
-  background-size: cover;
-  transition: ease-in-out 0.3s;
-  z-index: 2;
+.image-container .imagem img:nth-of-type(2) {
+	-webkit-clip-path: var(--clip-start);
+			clip-path: var(--clip-start);
+	transition: -webkit-clip-path 0.5s;
+	transition: clip-path 0.5s;
+	transition: clip-path 0.5s, -webkit-clip-path 0.5s;
 }
-.container__image:before {
-  content: " ";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  background: inherit;
-  background-position: bottom;
-  filter: blur(40px) saturate(0%);
-  transform: scaleX(0.4);
-  transition: ease-in-out 0.4s;
-  border-radius: 120px;
-  transform-origin: right;
-  opacity: 0;
-  z-index: -1;
+  .image-container .imagem:hover img:nth-of-type(2) {
+	-webkit-clip-path: var(--clip-end);
+			clip-path: var(--clip-end);
+  }
+  @keyframes projetos {
+	  from{
+		left: 0;
+	  }
+	  to{
+		left: -300px;
+	  }
+  }
+.projetos{
+	border-radius: 15px;
+	margin: 10px 10px;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	left: -100%;
+	animation: animacaoConteudo 1s 2.3s forwards;
+	width: 300px;
+	height: 300px;
 }
-.container__image .container__info {
-  position: relative;
-  line-height: 1.8;
-  transition: ease-in-out 0.3s;
-  opacity: 0;
+#projetoJogoJava{
+	cursor: pointer;
 }
-.container__image .container__info2 {
-  transition-delay: 0.15s;
+#jogo-info{
+	width: 600px;
+	height: 400px;
+	background: #000;
+	display: none;
+	border: 2px solid #1F6FEB;
+	border-radius: 5px;
 }
-.container__image:hover {
-  border-radius: 30px;
-  width: 450px;
-  height: 310px;
-  box-shadow: 0px 0px 1px #1F6FEB, 0px 2px 6px #1F6FEB, 0px 16px 24px #1F6FEB, 0px 24px 32px #1F6FEB;
+.projetos img{
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
-.container__image:hover .container__info {
-  transform: translate3d(-60%, 0px, 0px);
-  opacity: 1;
+.projetos:hover img{
+	animation: projetos .5s forwards;
 }
-
+.projetos .detalhes{
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .5s;
+	top: 0;
+    left: 100%;
+    padding: 0;
+}
+.projetos:hover .detalhes {
+	background-color: #1D1D1D;
+    top: 0;
+    left: 0%;
+}
