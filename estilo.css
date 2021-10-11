@@ -243,11 +243,3 @@ a{
     top: 0;
     left: 0%;
 }
- /*Small devices (landscape phones, 576px and up)*/
-@media (max-width: 767.98px) { 
-
-#sobre-mim{
-	text-align: center;
-	font-size: 4em;
-}
- }
