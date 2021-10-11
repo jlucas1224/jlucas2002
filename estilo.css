@@ -243,3 +243,23 @@ a{
     top: 0;
     left: 0%;
 }
+ /*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+#sobre-mim{
+	position: relative;
+	margin: 160px 0;
+	text-align: center;
+	font-size: 2.2em;
+	clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);	
+	width: 100%;
+	float: right;
+	animation: animacaoSobreMim 0.5s 1.7s forwards;
+}
+.titulos{
+	font-size: 4.5em;
+	position: relative;
+	left: -100%;
+	animation: animacaoConteudo 1s 2.3s forwards;
+}
+ }
