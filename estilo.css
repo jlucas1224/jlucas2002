@@ -6,13 +6,14 @@ body{
   height: 100vh;
  	filter: drop-shadow(-1vmin 1vmin 1vmin #000);
 }
+
 #caixa-nome{
 	float: left;
 }
 #sobre-mim{
 	position: relative;
 	margin: 160px 0;
-	font-size: 1em;
+	font-size: 1.3em;
 	clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);	
 	width: 400px;
 	float: right;
@@ -242,4 +243,11 @@ a{
 	background-color: #1D1D1D;
     top: 0;
     left: 0%;
+}
+@media (max-width: 767.98px) { 
+	#sobre-mim{	
+		width: 100%;
+		text-align: center;	
+		font-size: 2.3em;
+	}
 }
